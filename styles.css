@@ -513,3 +513,48 @@ a { color: inherit; text-decoration: none; }
     grid-template-columns: 1fr;
   }
 }
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+  margin: 2rem 0;
+}
+
+.product-gallery figure {
+  margin: 0;
+}
+
+.product-gallery a {
+  display: block;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 14px 35px rgba(78, 49, 45, 0.12);
+}
+
+.product-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.product-gallery a:hover img {
+  transform: scale(1.04);
+}
+
+.product-gallery figcaption {
+  margin-top: 0.65rem;
+  color: var(--burgundy);
+  font-family: Georgia, serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .product-gallery {
+    grid-template-columns: 1fr;
+  }
+}

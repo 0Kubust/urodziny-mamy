@@ -266,6 +266,83 @@
             <button class="memory-dot" type="button" aria-label="Zdjęcie 5"></button>
           </div>
         </section>
+        <section class="family-reveal" aria-label="Odkrywanie rodzinnego portretu">
+  <div class="family-stage">
+    <!-- Kolorowy obraz znajdujący się pod wszystkimi warstwami -->
+    <img
+      class="family-base"
+      src="rodzinny-portret.png"
+      alt="Rodzinny portret z Mamą pośrodku"
+    />
+
+    <!-- Wyszarzona warstwa Krzyśka -->
+    <button
+      class="family-layer layer-krzysiek"
+      type="button"
+      data-person="krzysiek"
+      aria-label="Odkryj Krzyśka"
+      aria-pressed="false"
+    >
+      <img src="rodzinny-portret.png" alt="" />
+    </button>
+
+    <!-- Wyszarzona warstwa Kitka -->
+    <button
+      class="family-layer layer-kitek"
+      type="button"
+      data-person="kitek"
+      aria-label="Odkryj Kitka"
+      aria-pressed="false"
+    >
+      <img src="rodzinny-portret.png" alt="" />
+    </button>
+
+    <!-- Wyszarzona warstwa Tosi -->
+    <button
+      class="family-layer layer-tosia"
+      type="button"
+      data-person="tosia"
+      aria-label="Odkryj Tosię"
+      aria-pressed="false"
+    >
+      <img src="rodzinny-portret.png" alt="" />
+    </button>
+
+    <!-- Wyszarzona warstwa Kuby -->
+    <button
+      class="family-layer layer-kuba"
+      type="button"
+      data-person="kuba"
+      aria-label="Odkryj Kubę"
+      aria-pressed="false"
+    >
+      <img src="rodzinny-portret.png" alt="" />
+    </button>
+
+    <!-- Wyszarzona warstwa Julii -->
+    <button
+      class="family-layer layer-julia"
+      type="button"
+      data-person="julia"
+      aria-label="Odkryj Julię"
+      aria-pressed="false"
+    >
+      <img src="rodzinny-portret.png" alt="" />
+    </button>
+
+    <div class="family-counter">
+      <span id="familyRevealCount">0</span>/5
+    </div>
+  </div>
+
+  <p
+    class="family-final-message"
+    id="familyFinalMessage"
+    aria-live="polite"
+  >
+    To AI. Teraz czas zrobić je w rzeczywistości.
+  </p>
+</section>
       </article>
     </main>
 

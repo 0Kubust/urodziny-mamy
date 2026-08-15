@@ -352,6 +352,36 @@
       const slides = [...document.querySelectorAll(".memory-slide")];
       const dots = [...document.querySelectorAll(".memory-dot")];
       const counter = document.querySelector(".current-slide");
+      const familyLayers = [
+  ...document.querySelectorAll(".family-layer")
+];
+
+const familyCounter = document.querySelector("#familyRevealCount");
+const familyMessage = document.querySelector("#familyFinalMessage");
+const familyStage = document.querySelector(".family-stage");
+
+let revealedFamilyMembers = 0;
+
+familyLayers.forEach((layer) => {
+  layer.addEventListener(
+    "click",
+    () => {
+      layer.classList.add("is-revealed");
+      layer.setAttribute("aria-pressed", "true");
+
+      revealedFamilyMembers += 1;
+      familyCounter.textContent = revealedFamilyMembers;
+
+      if (revealedFamilyMembers === familyLayers.length) {
+        setTimeout(() => {
+          familyMessage.classList.add("is-visible");
+          familyStage.classList.add("is-complete");
+        }, 800);
+      }
+    },
+    { once: true }
+  );
+});
 
       let currentSlide = 0;
       let touchStartX = 0;

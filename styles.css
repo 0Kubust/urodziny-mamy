@@ -470,3 +470,46 @@ a { color: inherit; text-decoration: none; }
     transition-duration: .01ms !important;
   }
 }
+.business-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.business-gallery figure {
+  margin: 0;
+}
+
+.business-gallery a {
+  display: block;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 14px 35px rgba(78, 49, 45, 0.14);
+}
+
+.business-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.25s ease;
+}
+
+.business-gallery a:hover img {
+  transform: scale(1.025);
+}
+
+.business-gallery figcaption {
+  margin-top: 0.65rem;
+  color: var(--muted);
+  font-family: Georgia, serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .business-gallery {
+    grid-template-columns: 1fr;
+  }
+}
